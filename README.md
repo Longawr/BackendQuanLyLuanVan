@@ -1,4 +1,4 @@
-# Backend Quản lý đồ án.
+# Backend Quản lý Luận văn
 Quản lý đồ án của sinh viên đồng thời sử dụng "Plagiarism Checker and Auto Citation Generator Multi-Lingual" của Smodin trên rapidAPI để phát hiện đạo văn.
 
 ## Hướng dẫn cài đặt:
