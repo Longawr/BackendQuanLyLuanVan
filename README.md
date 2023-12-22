@@ -25,11 +25,11 @@ Quản lý đồ án của sinh viên đồng thời sử dụng "Plagiarism Che
 ## Tài liệu API:
 * [POST] /auth/login
   - Body:
-    + id: String,
-    + password: String
+    + `id`: String,
+    + `password`: String
   - Response:
-    + expiredAt: Date as String,
-    + role: String
+    + `expiredAt`: Date as String,
+    + `role`: String
   - E.g.: Axios:
   ```
   const url = "/auth/login";
