@@ -1,7 +1,7 @@
-  * Backend Quản lý đồ án.
+# Backend Quản lý đồ án.
       Quản lý đồ án của sinh viên đồng thời sử dụng "Plagiarism Checker and Auto Citation Generator Multi-Lingual" của Smodin trên rapidAPI để phát hiện đạo văn.
 
-  * Hướng dẫn cài đặt:
+# Hướng dẫn cài đặt:
       - Tải source code về và cài đầy đủ thư viện yêu cầu (npm install)
       - Tạo một cluster trên server của mongodb và tạo database trong đó.
       - Thêm IP 0.0.0.0 vào danh sách IP được phép truy cập trong cluster để mọi IP đều có thể truy cập vào database.
@@ -22,15 +22,15 @@
         + MEGANZ_USER_AGENT= là tên đại diện cho phiên truy cập, có thể đặt tên bất kỳ.
         + API_KEY= là api key của tài khoản của bạn trên rapid API.
 
-  * Tài liệu API:
+# Tài liệu API:
     - [POST] /auth/login
         + Body: id: String,
                 password: String
         + Response: expiredAt: Date as String,
                     role: String
         + E.g.: Axios:
-  const url = "/auth/login";
-  const body = { id: "CN001", password: "123456@A" };
+  > const url = "/auth/login";
+  > const body = { id: "CN001", password: "123456@A" };
 
-  const { expiredAt, role } = api.post(url, body).then(({ data }) => data);
+  > const { expiredAt, role } = api.post(url, body).then(({ data }) => data);
   
