@@ -24,13 +24,15 @@
 
 # Tài liệu API:
 ## [POST] /auth/login
-        + Body: id: String,
-                password: String
-        + Response: expiredAt: Date as String,
-                    role: String
-        + E.g.: Axios:
-      > const url = "/auth/login";
-      > const body = { id: "CN001", password: "123456@A" };
+      + Body: id: String,
+          password: String
+      + Response: expiredAt: Date as String,
+              role: String
+      + E.g.: Axios:
+      ```
+      const url = "/auth/login";
+      const body = { id: "CN001", password: "123456@A" };
       
-      > const { expiredAt, role } = api.post(url, body).then(({ data }) => data);
+      const { expiredAt, role } = api.post(url, body).then(({ data }) => data);
+      ```
   
