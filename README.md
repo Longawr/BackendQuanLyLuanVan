@@ -23,18 +23,18 @@ Quản lý đồ án của sinh viên đồng thời sử dụng "Plagiarism Che
   + API_KEY= là api key của tài khoản của bạn trên rapid API.
 
 ## Tài liệu API:
-### [POST] /auth/login
-- Body:
-  + id: String,
-  + password: String
-- Response:
-  + expiredAt: Date as String,
-  + role: String
-- E.g.: Axios:
-```
-const url = "/auth/login";
-const body = { id: "CN001", password: "123456@A" };
-
-const { expiredAt, role } = api.post(url, body).then(({ data }) => data);
-```
+* [POST] /auth/login
+  - Body:
+    + id: String,
+    + password: String
+  - Response:
+    + expiredAt: Date as String,
+    + role: String
+  - E.g.: Axios:
+  ```
+  const url = "/auth/login";
+  const body = { id: "CN001", password: "123456@A" };
+  
+  const { expiredAt, role } = api.post(url, body).then(({ data }) => data);
+  ```
 
