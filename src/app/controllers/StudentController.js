@@ -98,7 +98,7 @@ class StudentController {
         }
     };
 
-    // password: birthday+major, e.g.: '24092023CNTT'
+    // password: birthday+major, e.g.: '09102023CNTT'
     //[POST] /student/add
     add = async (req, res) => {
         const yearInShort = new Date().getFullYear().toString().slice(2, 4);

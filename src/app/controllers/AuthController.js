@@ -17,10 +17,8 @@ class AuthController {
 
         if (!id || !password) {
             return res.status(500).json({
-                error: {
-                    name: 'FieldMissingError',
-                    message: 'Please fill all required fields',
-                },
+                name: 'FieldMissingError',
+                message: 'Please fill all required fields',
             });
         }
 
@@ -30,19 +28,15 @@ class AuthController {
                 .exec();
             if (account == null) {
                 return res.status(500).json({
-                    error: {
-                        name: 'loginError',
-                        message: 'ID is not registered',
-                    },
+                    name: 'loginError',
+                    message: 'ID is not registered',
                 });
             }
 
             if (!(await bcrypt.compare(password, account.hashedPassword))) {
                 return res.status(500).json({
-                    error: {
-                        name: 'PasswordError',
-                        message: 'Password is incorrect',
-                    },
+                    name: 'PasswordError',
+                    message: 'Password is incorrect',
                 });
             }
 
